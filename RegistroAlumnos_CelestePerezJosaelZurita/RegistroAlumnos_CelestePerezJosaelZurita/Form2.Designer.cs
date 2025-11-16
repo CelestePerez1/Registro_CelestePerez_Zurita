@@ -31,7 +31,7 @@
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
-            button1 = new Button();
+            btnIngresar = new Button();
             button2 = new Button();
             SuspendLayout();
             // 
@@ -62,14 +62,15 @@
             textBox1.Size = new Size(286, 34);
             textBox1.TabIndex = 2;
             // 
-            // button1
+            // btnIngresar
             // 
-            button1.Location = new Point(139, 200);
-            button1.Name = "button1";
-            button1.Size = new Size(113, 39);
-            button1.TabIndex = 3;
-            button1.Text = "Ingresar";
-            button1.UseVisualStyleBackColor = true;
+            btnIngresar.Location = new Point(139, 200);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(113, 39);
+            btnIngresar.TabIndex = 3;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // button2
             // 
@@ -89,7 +90,7 @@
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(547, 278);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnIngresar);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -105,7 +106,7 @@
         private Label label1;
         private Label label2;
         private TextBox textBox1;
-        private Button button1;
+        private Button btnIngresar;
         private Button button2;
     }
 }

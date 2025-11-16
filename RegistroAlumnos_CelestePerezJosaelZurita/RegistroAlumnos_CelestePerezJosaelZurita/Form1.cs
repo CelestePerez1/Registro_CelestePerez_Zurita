@@ -5,6 +5,7 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
        
