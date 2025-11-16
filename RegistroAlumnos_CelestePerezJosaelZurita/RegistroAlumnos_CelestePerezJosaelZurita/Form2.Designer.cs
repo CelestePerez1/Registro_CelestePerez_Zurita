@@ -86,6 +86,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoScrollMinSize = new Size(0, 70);
+            BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(547, 278);
             Controls.Add(button2);
             Controls.Add(button1);
