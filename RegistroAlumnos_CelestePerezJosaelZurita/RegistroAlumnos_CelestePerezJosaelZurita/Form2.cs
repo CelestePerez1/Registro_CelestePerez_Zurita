@@ -15,12 +15,13 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
         public Form2()
         {
             InitializeComponent();
+            //centrar la ventana
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            //no borrar, sino se corrompe el form2
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -45,9 +46,9 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+          Application.Exit();
         }
     }
 }

@@ -28,41 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            textUser = new TextBox();
+            textCon2 = new TextBox();
             label8 = new Label();
             label9 = new Label();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
+            check1 = new CheckBox();
+            btnGua1 = new Button();
             label10 = new Label();
             listBox1 = new ListBox();
             panel1 = new Panel();
             panel4 = new Panel();
-            label11 = new Label();
+            txtContAlumno = new TextBox();
+            lblEST = new Label();
             panel2 = new Panel();
             label7 = new Label();
             label12 = new Label();
-            textBox5 = new TextBox();
+            textCon = new TextBox();
             label1 = new Label();
             panel6 = new Panel();
-            button4 = new Button();
+            btnSalir2 = new Button();
+            btnAyuda = new Button();
+            btnNuevo2 = new Button();
+            btnGua2 = new Button();
             panel5 = new Panel();
             label13 = new Label();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            comboBox3 = new ComboBox();
+            rbtVis = new RadioButton();
+            rbtMat = new RadioButton();
+            combo2 = new ComboBox();
             label6 = new Label();
-            comboBox1 = new ComboBox();
+            combo1 = new ComboBox();
             label4 = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
+            textCedu = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            textNombre = new TextBox();
             label2 = new Label();
             panel3 = new Panel();
-            button2 = new Button();
-            button3 = new Button();
-            button5 = new Button();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -71,19 +72,21 @@
             panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox3
+            // textUser
             // 
-            textBox3.Location = new Point(136, 582);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(248, 27);
-            textBox3.TabIndex = 12;
+            textUser.Location = new Point(136, 582);
+            textUser.Name = "textUser";
+            textUser.ReadOnly = true;
+            textUser.Size = new Size(248, 27);
+            textUser.TabIndex = 12;
             // 
-            // textBox4
+            // textCon2
             // 
-            textBox4.Location = new Point(314, 160);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(226, 27);
-            textBox4.TabIndex = 16;
+            textCon2.Location = new Point(314, 160);
+            textCon2.MaxLength = 12;
+            textCon2.Name = "textCon2";
+            textCon2.Size = new Size(226, 27);
+            textCon2.TabIndex = 16;
             // 
             // label8
             // 
@@ -105,25 +108,26 @@
             label9.TabIndex = 13;
             label9.Text = "Contraseña:*";
             // 
-            // checkBox1
+            // check1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.BackColor = Color.White;
-            checkBox1.Location = new Point(136, 711);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(337, 24);
-            checkBox1.TabIndex = 20;
-            checkBox1.Text = "Acepto los términos y condiciones del sistema";
-            checkBox1.UseVisualStyleBackColor = false;
+            check1.AutoSize = true;
+            check1.BackColor = Color.White;
+            check1.Location = new Point(136, 711);
+            check1.Name = "check1";
+            check1.Size = new Size(337, 24);
+            check1.TabIndex = 20;
+            check1.Text = "Acepto los términos y condiciones del sistema";
+            check1.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnGua1
             // 
-            button1.Location = new Point(141, 760);
-            button1.Name = "button1";
-            button1.Size = new Size(142, 36);
-            button1.TabIndex = 21;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
+            btnGua1.Location = new Point(141, 760);
+            btnGua1.Name = "btnGua1";
+            btnGua1.Size = new Size(142, 36);
+            btnGua1.TabIndex = 21;
+            btnGua1.Text = "Guardar";
+            btnGua1.UseVisualStyleBackColor = true;
+            btnGua1.Click += btnGua1_Click;
             // 
             // label10
             // 
@@ -158,28 +162,38 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(label11);
+            panel4.Controls.Add(txtContAlumno);
+            panel4.Controls.Add(lblEST);
             panel4.Location = new Point(24, 43);
             panel4.Name = "panel4";
             panel4.Size = new Size(520, 41);
             panel4.TabIndex = 27;
             // 
-            // label11
+            // txtContAlumno
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(231, 10);
-            label11.Name = "label11";
-            label11.Size = new Size(58, 20);
-            label11.TabIndex = 28;
-            label11.Text = "label11";
+            txtContAlumno.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtContAlumno.Location = new Point(270, 6);
+            txtContAlumno.Name = "txtContAlumno";
+            txtContAlumno.ReadOnly = true;
+            txtContAlumno.Size = new Size(67, 27);
+            txtContAlumno.TabIndex = 29;
+            // 
+            // lblEST
+            // 
+            lblEST.AutoSize = true;
+            lblEST.Location = new Point(136, 9);
+            lblEST.Name = "lblEST";
+            lblEST.Size = new Size(128, 20);
+            lblEST.TabIndex = 28;
+            lblEST.Text = "Total de Alumnos:";
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label12);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
+            panel2.Controls.Add(textCon);
+            panel2.Controls.Add(textCon2);
             panel2.Location = new Point(96, 496);
             panel2.Name = "panel2";
             panel2.Size = new Size(566, 321);
@@ -206,12 +220,13 @@
             label12.TabIndex = 29;
             label12.Text = "Credenciales";
             // 
-            // textBox5
+            // textCon
             // 
-            textBox5.Location = new Point(36, 161);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(226, 27);
-            textBox5.TabIndex = 28;
+            textCon.Location = new Point(36, 161);
+            textCon.MaxLength = 12;
+            textCon.Name = "textCon";
+            textCon.Size = new Size(226, 27);
+            textCon.TabIndex = 28;
             // 
             // label1
             // 
@@ -227,23 +242,54 @@
             // panel6
             // 
             panel6.BackColor = Color.White;
-            panel6.Controls.Add(button3);
-            panel6.Controls.Add(button5);
-            panel6.Controls.Add(button2);
-            panel6.Controls.Add(button4);
+            panel6.Controls.Add(btnSalir2);
+            panel6.Controls.Add(btnAyuda);
+            panel6.Controls.Add(btnNuevo2);
+            panel6.Controls.Add(btnGua2);
             panel6.Location = new Point(96, 98);
             panel6.Name = "panel6";
             panel6.Size = new Size(566, 68);
             panel6.TabIndex = 43;
             // 
-            // button4
+            // btnSalir2
             // 
-            button4.Location = new Point(23, 17);
-            button4.Name = "button4";
-            button4.Size = new Size(126, 36);
-            button4.TabIndex = 23;
-            button4.Text = "Guardar";
-            button4.UseVisualStyleBackColor = true;
+            btnSalir2.Location = new Point(414, 17);
+            btnSalir2.Name = "btnSalir2";
+            btnSalir2.Size = new Size(126, 36);
+            btnSalir2.TabIndex = 26;
+            btnSalir2.Text = "Salir";
+            btnSalir2.UseVisualStyleBackColor = true;
+            btnSalir2.Click += button3_Click;
+            // 
+            // btnAyuda
+            // 
+            btnAyuda.Location = new Point(284, 17);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(126, 36);
+            btnAyuda.TabIndex = 25;
+            btnAyuda.Text = "Ayuda";
+            btnAyuda.UseVisualStyleBackColor = true;
+            btnAyuda.Click += btnAyuda_Click;
+            // 
+            // btnNuevo2
+            // 
+            btnNuevo2.Location = new Point(153, 17);
+            btnNuevo2.Name = "btnNuevo2";
+            btnNuevo2.Size = new Size(126, 36);
+            btnNuevo2.TabIndex = 24;
+            btnNuevo2.Text = "Nuevo";
+            btnNuevo2.UseVisualStyleBackColor = true;
+            btnNuevo2.Click += btnNuevo2_Click;
+            // 
+            // btnGua2
+            // 
+            btnGua2.Location = new Point(23, 17);
+            btnGua2.Name = "btnGua2";
+            btnGua2.Size = new Size(126, 36);
+            btnGua2.TabIndex = 23;
+            btnGua2.Text = "Guardar";
+            btnGua2.UseVisualStyleBackColor = true;
+            btnGua2.Click += btnGua2_Click;
             // 
             // panel5
             // 
@@ -265,37 +311,38 @@
             label13.TabIndex = 30;
             label13.Text = "Datos del Alumno";
             // 
-            // radioButton2
+            // rbtVis
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.BackColor = Color.White;
-            radioButton2.Location = new Point(292, 418);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(117, 24);
-            radioButton2.TabIndex = 40;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "radioButton2";
-            radioButton2.UseVisualStyleBackColor = false;
+            rbtVis.AutoSize = true;
+            rbtVis.BackColor = Color.White;
+            rbtVis.Location = new Point(292, 418);
+            rbtVis.Name = "rbtVis";
+            rbtVis.Size = new Size(99, 24);
+            rbtVis.TabIndex = 40;
+            rbtVis.TabStop = true;
+            rbtVis.Text = "Vespertina";
+            rbtVis.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // rbtMat
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.BackColor = Color.White;
-            radioButton1.Location = new Point(132, 418);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(117, 24);
-            radioButton1.TabIndex = 39;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "radioButton1";
-            radioButton1.UseVisualStyleBackColor = false;
+            rbtMat.AutoSize = true;
+            rbtMat.BackColor = Color.White;
+            rbtMat.Location = new Point(132, 418);
+            rbtMat.Name = "rbtMat";
+            rbtMat.Size = new Size(89, 24);
+            rbtMat.TabIndex = 39;
+            rbtMat.TabStop = true;
+            rbtMat.Text = "Matutina";
+            rbtMat.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
+            // combo2
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(415, 340);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 38;
+            combo2.FormattingEnabled = true;
+            combo2.Items.AddRange(new object[] { "- Seleccione -", "Primer Semestre", "Segundo Semestre", "Tercer Semestre", "Cuarto Semestre", "Quinto Semestre", "Sexto Semestre", "Séptimo Semestre", "Octavo Semestre", "Noveno Semestre", "Décimo Semestre" });
+            combo2.Location = new Point(318, 147);
+            combo2.Name = "combo2";
+            combo2.Size = new Size(185, 28);
+            combo2.TabIndex = 38;
             // 
             // label6
             // 
@@ -307,13 +354,14 @@
             label6.TabIndex = 37;
             label6.Text = "Semestre:*";
             // 
-            // comboBox1
+            // combo1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(138, 340);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 36;
+            combo1.FormattingEnabled = true;
+            combo1.Items.AddRange(new object[] { "- Seleccione -", "Ingienería de Sistemas", "Derecho", "Administración", "Contaduría", "Medicina", "Psicología" });
+            combo1.Location = new Point(138, 340);
+            combo1.Name = "combo1";
+            combo1.Size = new Size(185, 28);
+            combo1.TabIndex = 36;
             // 
             // label4
             // 
@@ -335,12 +383,12 @@
             label5.TabIndex = 34;
             label5.Text = "Carrera:*";
             // 
-            // textBox2
+            // textCedu
             // 
-            textBox2.Location = new Point(414, 275);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(226, 27);
-            textBox2.TabIndex = 33;
+            textCedu.Location = new Point(414, 275);
+            textCedu.Name = "textCedu";
+            textCedu.Size = new Size(226, 27);
+            textCedu.TabIndex = 33;
             // 
             // label3
             // 
@@ -352,12 +400,12 @@
             label3.TabIndex = 32;
             label3.Text = "Cédula:*";
             // 
-            // textBox1
+            // textNombre
             // 
-            textBox1.Location = new Point(136, 275);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(248, 27);
-            textBox1.TabIndex = 31;
+            textNombre.Location = new Point(136, 275);
+            textNombre.Name = "textNombre";
+            textNombre.Size = new Size(248, 27);
+            textNombre.TabIndex = 31;
             // 
             // label2
             // 
@@ -373,37 +421,11 @@
             // 
             panel3.BackColor = Color.White;
             panel3.Controls.Add(label13);
+            panel3.Controls.Add(combo2);
             panel3.Location = new Point(96, 193);
             panel3.Name = "panel3";
             panel3.Size = new Size(566, 287);
             panel3.TabIndex = 41;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(153, 17);
-            button2.Name = "button2";
-            button2.Size = new Size(126, 36);
-            button2.TabIndex = 24;
-            button2.Text = "Nuevo";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(414, 17);
-            button3.Name = "button3";
-            button3.Size = new Size(126, 36);
-            button3.TabIndex = 26;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(284, 17);
-            button5.Name = "button5";
-            button5.Size = new Size(126, 36);
-            button5.TabIndex = 25;
-            button5.Text = "Acerca de";
-            button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -414,28 +436,29 @@
             ClientSize = new Size(750, 550);
             Controls.Add(panel6);
             Controls.Add(panel5);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(comboBox3);
+            Controls.Add(rbtVis);
+            Controls.Add(rbtMat);
             Controls.Add(label6);
-            Controls.Add(comboBox1);
+            Controls.Add(combo1);
             Controls.Add(label4);
             Controls.Add(label5);
-            Controls.Add(textBox2);
+            Controls.Add(textCedu);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(textNombre);
             Controls.Add(label2);
             Controls.Add(panel3);
             Controls.Add(listBox1);
-            Controls.Add(button1);
-            Controls.Add(checkBox1);
+            Controls.Add(btnGua1);
+            Controls.Add(check1);
             Controls.Add(label8);
             Controls.Add(label9);
-            Controls.Add(textBox3);
+            Controls.Add(textUser);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            KeyPreview = true;
             Name = "Form1";
             Text = "Form1";
+            KeyDown += Form1_KeyDown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);
@@ -452,40 +475,41 @@
         }
 
         #endregion
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textUser;
+        private TextBox textCon2;
         private Label label8;
         private Label label9;
-        private CheckBox checkBox1;
-        private Button button1;
+        private CheckBox check1;
+        private Button btnGua1;
         private Label label10;
         private ListBox listBox1;
         private Panel panel1;
         private Panel panel2;
-        private TextBox textBox5;
+        private TextBox textCon;
         private Panel panel4;
-        private Label label11;
+        private Label lblEST;
         private Label label12;
         private Label label7;
         private Label label1;
         private Panel panel6;
         private Panel panel5;
         private Label label13;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private ComboBox comboBox3;
+        private RadioButton rbtVis;
+        private RadioButton rbtMat;
+        private ComboBox combo2;
         private Label label6;
-        private ComboBox comboBox1;
+        private ComboBox combo1;
         private Label label4;
         private Label label5;
-        private TextBox textBox2;
+        private TextBox textCedu;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox textNombre;
         private Label label2;
         private Panel panel3;
-        private Button button4;
-        private Button button3;
-        private Button button5;
-        private Button button2;
+        private Button btnGua2;
+        private Button btnSalir2;
+        private Button btnAyuda;
+        private Button btnNuevo2;
+        private TextBox txtContAlumno;
     }
 }
