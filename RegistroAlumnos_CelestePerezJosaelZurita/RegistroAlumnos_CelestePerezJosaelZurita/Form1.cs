@@ -21,6 +21,7 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             rbtMat.Checked = false;
             rbtVis.Checked = false;
             check1.Checked = false;
+            check2.Checked = false;
         }
 
         private void btnGua1_Click(object sender, EventArgs e)
@@ -30,13 +31,11 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             if (v.ValidarCampos(textNombre, textCedu, textCon,
                                 textCon2, check1,
                                 combo1, combo2,
-                                rbtMat, rbtVis))
+                                rbtMat, rbtVis, check2))
             {
                 MessageBox.Show("Datos correctos.");
             }
         }
-
-
 
         //Salir del formulario
         private void button3_Click(object sender, EventArgs e)
@@ -54,7 +53,7 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             if (v.ValidarCampos(textNombre, textCedu, textCon,
                                 textCon2, check1,
                                 combo1, combo2,
-                                rbtMat, rbtVis))
+                                rbtMat, rbtVis, check2))
             {
                 MessageBox.Show("Datos correctos.");
             }

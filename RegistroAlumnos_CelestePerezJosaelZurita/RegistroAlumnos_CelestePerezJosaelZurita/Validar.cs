@@ -10,13 +10,13 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
     {
         public bool ValidarCampos(TextBox textNombre, TextBox textCedu, TextBox textCon, 
             TextBox textCon2, CheckBox check1, ComboBox combo1, 
-            ComboBox combo2, RadioButton rbtMat, RadioButton rbtVis)
+            ComboBox combo2, RadioButton rbtMat, RadioButton rbtVis, CheckBox check2)
         {
             //validar que todos los campos esten completos
          if (textNombre.Text.Trim() == "" || textCedu.Text.Trim() == "" ||
          combo1.SelectedIndex == -1 || combo2.SelectedIndex == -1 ||
          (!rbtMat.Checked && !rbtVis.Checked) ||textCon.Text.Trim() == "" ||
-         textCon2.Text.Trim() == "" ||check1.Checked == false)
+         textCon2.Text.Trim() == "" ||check1.Checked == false || check2.Checked == false)
             {
                 MessageBox.Show("Se necesita llenar todos los campos .",
                     "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -49,11 +49,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(214, 90);
+            label2.Location = new Point(177, 91);
             label2.Name = "label2";
-            label2.Size = new Size(149, 20);
+            label2.Size = new Size(205, 20);
             label2.TabIndex = 1;
-            label2.Text = "Ingrese el código de ";
+            label2.Text = "Ingrese el código de profesor";
             // 
             // textCodigo
             // 

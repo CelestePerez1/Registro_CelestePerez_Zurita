@@ -64,6 +64,7 @@
             textNombre = new TextBox();
             label2 = new Label();
             panel3 = new Panel();
+            check2 = new CheckBox();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -121,12 +122,13 @@
             // 
             // btnGua1
             // 
-            btnGua1.Location = new Point(141, 760);
+            btnGua1.BackColor = Color.FromArgb(255, 255, 128);
+            btnGua1.Location = new Point(403, 264);
             btnGua1.Name = "btnGua1";
             btnGua1.Size = new Size(142, 36);
             btnGua1.TabIndex = 21;
             btnGua1.Text = "Guardar";
-            btnGua1.UseVisualStyleBackColor = true;
+            btnGua1.UseVisualStyleBackColor = false;
             btnGua1.Click += btnGua1_Click;
             // 
             // label10
@@ -190,10 +192,12 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(check2);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label12);
             panel2.Controls.Add(textCon);
             panel2.Controls.Add(textCon2);
+            panel2.Controls.Add(btnGua1);
             panel2.Location = new Point(96, 496);
             panel2.Name = "panel2";
             panel2.Size = new Size(566, 321);
@@ -427,6 +431,17 @@
             panel3.Size = new Size(566, 287);
             panel3.TabIndex = 41;
             // 
+            // check2
+            // 
+            check2.AutoSize = true;
+            check2.BackColor = Color.White;
+            check2.Location = new Point(40, 245);
+            check2.Name = "check2";
+            check2.Size = new Size(180, 24);
+            check2.TabIndex = 44;
+            check2.Text = "Recibir Notificaciones ";
+            check2.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -448,7 +463,6 @@
             Controls.Add(label2);
             Controls.Add(panel3);
             Controls.Add(listBox1);
-            Controls.Add(btnGua1);
             Controls.Add(check1);
             Controls.Add(label8);
             Controls.Add(label9);
@@ -511,5 +525,6 @@
         private Button btnAyuda;
         private Button btnNuevo2;
         private TextBox txtContAlumno;
+        private CheckBox check2;
     }
 }
