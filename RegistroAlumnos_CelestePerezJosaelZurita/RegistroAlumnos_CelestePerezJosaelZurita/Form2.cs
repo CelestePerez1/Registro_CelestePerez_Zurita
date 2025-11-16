@@ -25,9 +25,29 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Hide();
+            string codigoIngresado = textCodigo.Text.Trim();
+
+            // Códigos válidos
+            string adminCode = "admin123";
+            string profesorCode = "profe123";
+
+            if (codigoIngresado == adminCode || codigoIngresado == profesorCode)
+            {
+                // Abrir el formulario principal
+                Form1 f1 = new Form1();
+                f1.Show();
+                this.Hide();
+            }
+            else
+            {
+                lblMensaje.Text = "Código incorrecto. Intente nuevamente.";
+                lblMensaje.Visible = true;
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

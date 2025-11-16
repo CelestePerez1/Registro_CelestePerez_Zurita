@@ -30,16 +30,17 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            textCodigo = new TextBox();
             btnIngresar = new Button();
-            button2 = new Button();
+            btnSalir = new Button();
+            lblMensaje = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(163, 40);
+            label1.Location = new Point(163, 26);
             label1.Name = "label1";
             label1.Size = new Size(243, 38);
             label1.TabIndex = 0;
@@ -48,23 +49,23 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(214, 97);
+            label2.Location = new Point(214, 90);
             label2.Name = "label2";
             label2.Size = new Size(149, 20);
             label2.TabIndex = 1;
             label2.Text = "Ingrese el código de ";
             // 
-            // textBox1
+            // textCodigo
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(139, 147);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(286, 34);
-            textBox1.TabIndex = 2;
+            textCodigo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textCodigo.Location = new Point(139, 143);
+            textCodigo.Name = "textCodigo";
+            textCodigo.Size = new Size(286, 34);
+            textCodigo.TabIndex = 2;
             // 
             // btnIngresar
             // 
-            btnIngresar.Location = new Point(139, 200);
+            btnIngresar.Location = new Point(139, 195);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(113, 39);
             btnIngresar.TabIndex = 3;
@@ -72,26 +73,34 @@
             btnIngresar.UseVisualStyleBackColor = true;
             btnIngresar.Click += btnIngresar_Click;
             // 
-            // button2
+            // btnSalir
             // 
-            button2.Location = new Point(312, 200);
-            button2.Name = "button2";
-            button2.Size = new Size(113, 39);
-            button2.TabIndex = 4;
-            button2.Text = "Salir";
-            button2.UseVisualStyleBackColor = true;
+            btnSalir.Location = new Point(312, 196);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(113, 39);
+            btnSalir.TabIndex = 4;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // lblMensaje
+            // 
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(276, 253);
+            lblMensaje.Name = "lblMensaje";
+            lblMensaje.Size = new Size(0, 20);
+            lblMensaje.TabIndex = 5;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            AutoScrollMinSize = new Size(0, 70);
             BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(547, 278);
-            Controls.Add(button2);
+            ClientSize = new Size(547, 284);
+            Controls.Add(lblMensaje);
+            Controls.Add(btnSalir);
             Controls.Add(btnIngresar);
-            Controls.Add(textBox1);
+            Controls.Add(textCodigo);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form2";
@@ -105,8 +114,9 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox textCodigo;
         private Button btnIngresar;
-        private Button button2;
+        private Button btnSalir;
+        private Label lblMensaje;
     }
 }
