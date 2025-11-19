@@ -18,7 +18,7 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
         }
 
         private void btnNuevo2_Click(object sender, EventArgs e)
-        { 
+        {
             //Botón para limpiar 
             textNombre.Clear();
             textCedu.Clear();
@@ -34,7 +34,7 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
         }
 
         private void btnGua1_Click(object sender, EventArgs e)
-        { 
+        {
             //valida datos y despues debe mostrar esos datos en el listBox
             Validar v = new Validar();
             if (v.ValidarCampos(textNombre, textCedu, textCon,
@@ -88,9 +88,9 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
                 // Actualizar el contador
                 ActualizarContador();
 
-                MessageBox.Show("Estudiante registrado exitosamente.", 
-                               "Éxito", 
-                               MessageBoxButtons.OK, 
+                MessageBox.Show("Estudiante registrado exitosamente.",
+                               "Éxito",
+                               MessageBoxButtons.OK,
                                MessageBoxIcon.Information);
 
                 // Limpiar los campos después de guardar
@@ -137,5 +137,40 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void textNombre_TextChanged_1(object sender, EventArgs e)
+        {
+            GenerarUsuario();
+        }
+
+         private void textCedu_TextChanged(object sender, EventArgs e)
+        {
+            GenerarUsuario();
+        }
+
+        private void GenerarUsuario()
+        {
+            string nombre = textNombre.Text.Trim();
+            string cedula = textCedu.Text.Trim();
+
+            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(cedula))
+            {
+                // primera letra del nombre + cédula
+                string usuario = nombre[0].ToString().ToLower() + cedula;
+                textUser.Text = usuario;
+            }
+            else
+            {
+                textUser.Clear();
+            }
+        }
+
+       
     }//fin
 }

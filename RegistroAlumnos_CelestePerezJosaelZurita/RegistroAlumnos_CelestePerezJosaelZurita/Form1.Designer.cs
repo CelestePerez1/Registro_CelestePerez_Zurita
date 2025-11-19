@@ -409,6 +409,7 @@
             textCedu.Name = "textCedu";
             textCedu.Size = new Size(226, 27);
             textCedu.TabIndex = 33;
+            textCedu.TextChanged += textCedu_TextChanged;
             // 
             // label3
             // 
@@ -426,6 +427,7 @@
             textNombre.Name = "textNombre";
             textNombre.Size = new Size(248, 27);
             textNombre.TabIndex = 31;
+            textNombre.TextChanged += textNombre_TextChanged_1;
             // 
             // label2
             // 
@@ -477,6 +479,7 @@
             KeyPreview = true;
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             KeyDown += Form1_KeyDown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
