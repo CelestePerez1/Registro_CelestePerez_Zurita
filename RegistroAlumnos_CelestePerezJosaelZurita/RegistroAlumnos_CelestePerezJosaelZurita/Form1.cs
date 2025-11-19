@@ -65,7 +65,7 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
         {
             Form2 f2 = new Form2();
             f2.Show();
-            this.Hide();
+            this.Close();
         }
 
         //configuracion del botón 2 de guardar, guarda los datos como tal!!!

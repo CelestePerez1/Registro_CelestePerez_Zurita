@@ -374,6 +374,7 @@
             // combo1
             // 
             combo1.FormattingEnabled = true;
+            combo1.ImeMode = ImeMode.Off;
             combo1.Items.AddRange(new object[] { "- Seleccione -", "Ingienería de Sistemas", "Derecho", "Administración", "Contaduría", "Medicina", "Psicología" });
             combo1.Location = new Point(138, 340);
             combo1.Name = "combo1";

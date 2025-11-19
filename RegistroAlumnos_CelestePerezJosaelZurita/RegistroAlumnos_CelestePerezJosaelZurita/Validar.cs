@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace RegistroAlumnos_CelestePerezJosaelZurita
@@ -74,7 +75,12 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             return true;
         }
 
-
+        public bool EsCedulaValida(string cedula)
+        {
+            // Formato: número - número - número
+            string patron = @"^[0-9]+-[0-9]+-[0-9]+$";
+            return Regex.IsMatch(cedula, patron);
+        }
 
     }//fin
 }
