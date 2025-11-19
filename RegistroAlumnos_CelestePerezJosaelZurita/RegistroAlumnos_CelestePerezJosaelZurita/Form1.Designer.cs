@@ -354,6 +354,7 @@
             // 
             // combo2
             // 
+            combo2.DropDownStyle = ComboBoxStyle.DropDownList;
             combo2.FormattingEnabled = true;
             combo2.Items.AddRange(new object[] { "- Seleccione -", "Primer Semestre", "Segundo Semestre", "Tercer Semestre", "Cuarto Semestre", "Quinto Semestre", "Sexto Semestre", "Séptimo Semestre", "Octavo Semestre", "Noveno Semestre", "Décimo Semestre" });
             combo2.Location = new Point(318, 147);
@@ -373,6 +374,7 @@
             // 
             // combo1
             // 
+            combo1.DropDownStyle = ComboBoxStyle.DropDownList;
             combo1.FormattingEnabled = true;
             combo1.ImeMode = ImeMode.Off;
             combo1.Items.AddRange(new object[] { "- Seleccione -", "Ingienería de Sistemas", "Derecho", "Administración", "Contaduría", "Medicina", "Psicología" });
