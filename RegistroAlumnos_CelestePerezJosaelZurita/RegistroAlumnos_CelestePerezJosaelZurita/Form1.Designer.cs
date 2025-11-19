@@ -41,6 +41,7 @@
             txtContAlumno = new TextBox();
             lblEST = new Label();
             panel2 = new Panel();
+            check2 = new CheckBox();
             label7 = new Label();
             label12 = new Label();
             textCon = new TextBox();
@@ -64,7 +65,6 @@
             textNombre = new TextBox();
             label2 = new Label();
             panel3 = new Panel();
-            check2 = new CheckBox();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -150,6 +150,7 @@
             listBox1.ScrollAlwaysVisible = true;
             listBox1.Size = new Size(521, 64);
             listBox1.TabIndex = 25;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -179,6 +180,7 @@
             txtContAlumno.ReadOnly = true;
             txtContAlumno.Size = new Size(67, 27);
             txtContAlumno.TabIndex = 29;
+            txtContAlumno.TextChanged += txtContAlumno_TextChanged;
             // 
             // lblEST
             // 
@@ -202,6 +204,17 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(566, 321);
             panel2.TabIndex = 27;
+            // 
+            // check2
+            // 
+            check2.AutoSize = true;
+            check2.BackColor = Color.White;
+            check2.Location = new Point(40, 245);
+            check2.Name = "check2";
+            check2.Size = new Size(180, 24);
+            check2.TabIndex = 44;
+            check2.Text = "Recibir Notificaciones ";
+            check2.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -430,17 +443,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(566, 287);
             panel3.TabIndex = 41;
-            // 
-            // check2
-            // 
-            check2.AutoSize = true;
-            check2.BackColor = Color.White;
-            check2.Location = new Point(40, 245);
-            check2.Name = "check2";
-            check2.Size = new Size(180, 24);
-            check2.TabIndex = 44;
-            check2.Text = "Recibir Notificaciones ";
-            check2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

@@ -1,16 +1,25 @@
+锘縰sing System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 namespace RegistroAlumnos_CelestePerezJosaelZurita
 {
     public partial class Form1 : Form
     {
+        // Lista para almacenar los estudiantes registrados
+        private List<string> estudiantesRegistrados = new List<string>();
+
         public Form1()
         {
             InitializeComponent();
             //centrar la ventana
             this.StartPosition = FormStartPosition.CenterScreen;
+            ActualizarContador();
         }
 
         private void btnNuevo2_Click(object sender, EventArgs e)
-        { //Bot髇 para limmpiar 
+        { 
+            //Bot贸n para limpiar 
             textNombre.Clear();
             textCedu.Clear();
             combo1.SelectedIndex = -1;
@@ -25,15 +34,29 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
         }
 
         private void btnGua1_Click(object sender, EventArgs e)
-        { //valida datos y despues debe mostrar esos datos en el listBox
+        { 
+            //valida datos y despues debe mostrar esos datos en el listBox
             Validar v = new Validar();
-
             if (v.ValidarCampos(textNombre, textCedu, textCon,
                                 textCon2, check1,
                                 combo1, combo2,
                                 rbtMat, rbtVis, check2))
             {
-                MessageBox.Show("Datos correctos.");
+                // Agregar el nombre del estudiante a la lista
+                string nombreEstudiante = textNombre.Text.Trim();
+                estudiantesRegistrados.Add(nombreEstudiante);
+
+                // Actualizar el ListBox con la lista completa
+                listBox1.DataSource = null;
+                listBox1.DataSource = estudiantesRegistrados;
+
+                // Actualizar el contador
+                ActualizarContador();
+
+                MessageBox.Show("Estudiante registrado exitosamente.",
+                               "脡xito",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Information);
             }
         }
 
@@ -45,26 +68,48 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             this.Hide();
         }
 
-        //configuracion del bot髇 2 de guardar, gurda los datos como tal!!!
+        //configuracion del bot贸n 2 de guardar, guarda los datos como tal!!!
         private void btnGua2_Click(object sender, EventArgs e)
         {
             Validar v = new Validar();
-
             if (v.ValidarCampos(textNombre, textCedu, textCon,
                                 textCon2, check1,
                                 combo1, combo2,
                                 rbtMat, rbtVis, check2))
             {
-                MessageBox.Show("Datos correctos.");
+                // Agregar el nombre del estudiante a la lista
+                string nombreEstudiante = textNombre.Text.Trim();
+                estudiantesRegistrados.Add(nombreEstudiante);
+
+                // Actualizar el ListBox con la lista completa
+                listBox1.DataSource = null;
+                listBox1.DataSource = estudiantesRegistrados;
+
+                // Actualizar el contador
+                ActualizarContador();
+
+                MessageBox.Show("Estudiante registrado exitosamente.", 
+                               "脡xito", 
+                               MessageBoxButtons.OK, 
+                               MessageBoxIcon.Information);
+
+                // Limpiar los campos despu茅s de guardar
+                btnNuevo2.PerformClick();
             }
         }
 
-        //Bot髇 de ayuda
+        // M茅todo para actualizar el contador de estudiantes
+        private void ActualizarContador()
+        {
+            txtContAlumno.Text = estudiantesRegistrados.Count.ToString();
+        }
+
+        //Bot贸n de ayuda
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Aplicaci髇: Registro de Alumnos\n" +
-                   "Versi髇: 1.0\n" +
-                   "Autor: Celeste P閞ez y Josael Zurita \n",
+            MessageBox.Show("Aplicaci贸n: Registro de Alumnos\n" +
+                   "Versi贸n: 1.0\n" +
+                   "Autor: Celeste P茅rez y Josael Zurita \n",
                    "Ayuda",
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Information);
@@ -78,7 +123,6 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             {
                 btnGua2.PerformClick();
             }
-
             // ESC: limpiar
             if (e.KeyCode == Keys.Escape)
             {
@@ -86,5 +130,12 @@ namespace RegistroAlumnos_CelestePerezJosaelZurita
             }
         }
 
+        private void txtContAlumno_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }//fin
 }
